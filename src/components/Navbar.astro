@@ -1,0 +1,72 @@
+<nav class="flex py-10 justify-between items-center">
+  <img src="/assets/images/logo.svg" alt="logo" />
+
+  <button class="lg:hidden" id="btn-menu" type="button">
+    <img id="btn-image" src="/assets/images/icon-menu.svg" alt="menu" />
+
+    <img
+      id="btn-image-close"
+      class="hidden"
+      src="/assets/images/icon-menu-close.svg"
+      alt="menu"
+    />
+  </button>
+
+  <ul class="lg:flex gap-5 text-gray-600 hidden">
+    <li>
+      <a href="/index.html">Home</a>
+    </li>
+    <li>
+      <a href="/index.html">New</a>
+    </li>
+    <li>
+      <a href="/index.html">Popular</a>
+    </li>
+    <li>
+      <a href="/index.html">Trending</a>
+    </li>
+    <li>
+      <a href="/index.html">Categories</a>
+    </li>
+  </ul>
+
+  <div
+    id="menu"
+    class="absolute hidden top-[110px] left-0 bg-white w-full h-screen font-bold text-xl"
+  >
+    <ul class="flex flex-col gap-10 items-center">
+      <li>
+        <a href="/index.html">Home</a>
+      </li>
+      <li>
+        <a href="/index.html">New</a>
+      </li>
+      <li>
+        <a href="/index.html">Popular</a>
+      </li>
+      <li>
+        <a href="/index.html">Trending</a>
+      </li>
+      <li>
+        <a href="/index.html">Categories</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<script>
+  const btnMenu = document.querySelector("#btn-menu");
+
+  btnMenu.addEventListener("click", () => {
+    const menu = document.querySelector("#menu");
+    menu.classList.toggle("hidden");
+
+    const btnImage = document.querySelector("#btn-image");
+
+    btnImage.classList.toggle("hidden");
+
+    const btnImageClose = document.querySelector("#btn-image-close");
+
+    btnImageClose.classList.toggle("hidden");
+  });
+</script>
